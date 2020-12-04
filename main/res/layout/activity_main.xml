@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="2"
+    android:useDefaultMargins="true"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:text="Binus EzyFood"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        style="@style/titleTextViewStyle"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:text="My Order"
+        android:layout_marginBottom="60dp"
+        android:onClick="myOrder"
+        style="@style/btnStyle"
+        android:background="@drawable/btn_rounded_corners_2"
+        />
+
+    <Button
+        android:id="@+id/drinksBtn"
+        android:drawableTop="@drawable/ic_drink"
+        android:text="Drinks"
+        android:layout_marginLeft="40dp"
+        style="@style/homeBtnStyle"
+        android:onClick="drinksMenu"
+        android:background="@drawable/btn_rounded_corners"
+        />
+    <Button
+        android:id="@+id/snacksBtn"
+        android:drawableTop="@drawable/ic_snack"
+        android:text="Snacks"
+        style="@style/homeBtnStyle"
+        android:onClick="snacksMenu"
+        android:background="@drawable/btn_rounded_corners"
+        />
+    <Button
+        android:id="@+id/foodBtn"
+        android:drawableTop="@drawable/ic_food"
+        android:text="Foods"
+        android:layout_marginLeft="40dp"
+        style="@style/homeBtnStyle"
+        android:onClick="foodsMenu"
+        android:background="@drawable/btn_rounded_corners"
+        />
+    <Button
+        android:id="@+id/topupBtn"
+        android:drawableTop="@drawable/ic_topup"
+        android:text="Top Up"
+        android:layout_marginTop="20px"
+        style="@style/homeBtnStyle"
+        android:onClick="topupMenu"
+        android:background="@drawable/btn_rounded_corners"
+        />
+
+</GridLayout>

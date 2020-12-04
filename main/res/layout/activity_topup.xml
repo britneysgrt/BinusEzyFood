@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Topup">
+
+    <TextView
+        android:id="@+id/title"
+        android:text="Top Up"
+        style="@style/titleTextViewStyle"
+        android:layout_marginBottom="30dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/btnLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/title"
+        android:weightSum="2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="30dp">
+
+        <Button
+            android:text="Main Menu"
+            android:onClick="mainMenu"
+            style="@style/btnStyle"
+            android:background="@drawable/btn_rounded_corners_2"
+            android:layout_weight="1"/>
+
+        <Button
+            android:text="My Order"
+            android:onClick="myOrder"
+            style="@style/btnStyle"
+            android:background="@drawable/btn_rounded_corners_2"
+            android:layout_weight="2"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/saldoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/btnLayout"
+        android:weightSum="2"
+        android:layout_marginBottom="30dp">
+
+        <TextView
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:text="Balance: "
+            android:layout_weight="1"
+            android:gravity="end"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/currSaldo"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="25dp"
+            android:gravity="start"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/addSaldo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Input Topup Quantity"
+        android:layout_below="@id/saldoLayout"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="20dp"/>
+    
+    <Button
+        android:id="@+id/btnTopup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addSaldo"
+        android:text="TOPUP"
+        android:textSize="20dp"
+        android:padding="15dp"
+        android:layout_marginLeft="150dp"
+        android:background="@drawable/btn_rounded_corners_2"
+        android:onClick="topUp"/>
+
+</RelativeLayout>
